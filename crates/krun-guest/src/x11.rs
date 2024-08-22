@@ -66,7 +66,7 @@ where
             }
 
             // Always use display number 1
-            let display = b"1";
+            let display = b"0";
 
             wtr.write_u16::<BigEndian>(family)?;
             wtr.write_u16::<BigEndian>(addr.len().try_into()?)?;

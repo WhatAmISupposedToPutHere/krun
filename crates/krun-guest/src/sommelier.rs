@@ -20,7 +20,7 @@ where
     let gl_env = env::var("LIBGL_DRIVERS_PATH").ok();
 
     let mut cmd = Command::new(sommelier_path);
-    cmd.args(["--virtgpu-channel", "-X", "--glamor"]);
+    cmd.args(["--virtgpu-channel", "--glamor"]);
 
     if let Some(gl_env) = gl_env {
         cmd.arg(format!("--xwayland-gl-driver-path={gl_env}"));
